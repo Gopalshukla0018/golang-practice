@@ -14,18 +14,21 @@ func main() {
 
 	var isAuthenticated = true
 
-
-
 	// shorthand syntax---
-	price := 100;
+	price := 100
 	fmt.Println(price)
-		// but we have to define type if assign value later 
+	// but we have to define type if assign value later
 	var rate int
-	rate=200
+	rate = 200
 	fmt.Println(rate)
-
 
 	fmt.Println("authenticated is: ", isAuthenticated)
 
 	fmt.Println(name)
+	// group variable
+	var (
+		stdname = "Gopal"
+		class   = "10"
+	)
+	fmt.Println(stdname, class)
 }
