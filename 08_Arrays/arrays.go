@@ -31,6 +31,12 @@ func main() {
 	TwoDArr := [2][2]int {{1,2},{4,5}}
 	fmt.Println(TwoDArr)
 
+	
+  // use arrays only when
+  // fixed side
+  // benifits--
+  //   memory optimization
+  //  constant time access
 
 
 }
