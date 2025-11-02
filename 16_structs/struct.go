@@ -12,6 +12,18 @@ type order struct {
 	createdAt time.Time
 }
 
+func newOrder(id string, amount float32, status string) *order {
+	// initial setup goes here...
+
+	myorder := order{
+		id:     id,
+		amount: amount,
+		status: status,
+	}
+	return &myorder
+
+}
+
 // reciver type
 func (o *order) changeStatus(status string) {
 	o.status = status
@@ -26,11 +38,20 @@ func (o *order) getAmmount() float32 {
 
 func main() {
 
-	myorder := order{
-		id:     "1",
-		amount: 50.00,
-		status: "recived",
-	}
+	// inline struct if need one time
+	language := struct {
+		name   string
+		isGood bool
+	}{"golang", true}
+	fmt.Println("language struct", language)
+
+	myorder := newOrder("1", 30.50, "recived")
+	fmt.Println("myorder cnstrct", myorder)
+	// myorder := order{
+	// 	id:     "1",
+	// 	amount: 50.00,
+	// 	status: "recived",
+	// }
 
 	fmt.Println("changed amount ", myorder.getAmmount())
 
