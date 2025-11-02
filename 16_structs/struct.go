@@ -5,11 +5,18 @@ import (
 	"time"
 )
 
+type customer struct {
+	 // creating it for undestanding struct emmbedding
+	name  string
+	phone string
+}
+
 type order struct {
 	id        string
 	amount    float32
 	status    string
 	createdAt time.Time
+	customer  // struct embedding
 }
 
 func newOrder(id string, amount float32, status string) *order {
@@ -38,6 +45,18 @@ func (o *order) getAmmount() float32 {
 
 func main() {
 
+  newCustomer :=customer{
+	name:"john",
+	phone:"987654321",
+  }
+	testEM := order{
+		id: "1",
+		amount:30,
+		status:"recived",
+		customer: newCustomer,
+	}
+
+  fmt.Println("embeeding struct testing ",testEM)
 	// inline struct if need instant only
 	language := struct {
 		name   string
