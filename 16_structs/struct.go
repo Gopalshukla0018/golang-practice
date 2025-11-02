@@ -38,7 +38,7 @@ func (o *order) getAmmount() float32 {
 
 func main() {
 
-	// inline struct if need one time
+	// inline struct if need instant only
 	language := struct {
 		name   string
 		isGood bool
