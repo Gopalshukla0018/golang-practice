@@ -13,6 +13,7 @@ func main() {
 	http.HandleFunc("/home", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "Home page")
 	})
+	
 
 	fmt.Println("Server running on http://localhost:8080")
 	http.ListenAndServe(":8080", nil)
